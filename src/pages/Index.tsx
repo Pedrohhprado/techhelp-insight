@@ -3,6 +3,7 @@ import { mockTickets } from '@/data/mockTickets';
 import { Ticket } from '@/types/ticket';
 import { KPICard } from '@/components/dashboard/KPICard';
 import { TicketsTable } from '@/components/dashboard/TicketsTable';
+import { ThemeToggle } from '@/components/dashboard/ThemeToggle';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -204,9 +205,12 @@ export default function Index() {
       {/* Header */}
       <header className="bg-gradient-to-r from-primary to-secondary text-primary-foreground py-8 px-6 shadow-lg">
         <div className="container mx-auto">
-          <div className="flex items-center gap-3 mb-2">
-            <Headset className="h-8 w-8" />
-            <h1 className="text-3xl font-bold">TechHelp Solutions</h1>
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-3">
+              <Headset className="h-8 w-8" />
+              <h1 className="text-3xl font-bold">TechHelp Solutions</h1>
+            </div>
+            <ThemeToggle />
           </div>
           <p className="text-primary-foreground/90">Dashboard de Suporte Técnico</p>
           <div className="flex items-center gap-2 mt-2 text-sm text-primary-foreground/80">
